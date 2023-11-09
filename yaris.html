@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: greenyellow;
+            box-sizing: border-box;
+        }
+
+        .pist {
+            width: 1300px;
+            height: auto;
+            float: left;
+        }
+
+        img {
+            width: 100px;
+            object-fit: cover;
+        }
+
+        button {
+            width: 100px;
+            height: 50px;
+            margin-left: 50px;
+        }
+
+        .bitis {
+
+            width: 10px;
+            height: 261px;
+            background-color: brown;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pist">
+        <div id="at1"><img src="resimler/at.png" alt="Gülbatur"></div>
+        <hr>
+        <div id="at2"><img src="resimler/at.png" alt="Şahbatur"></div>
+        <hr>
+        <div id="at3"><img src="resimler/at.png" alt="Mahbatur"></div>
+        <hr>
+    </div>
+    <button onclick="start()" id="start">START</button>
+    <div class="bitis"></div>
+
+</body>
+<script>
+    function start() {
+
+        var toplam = 0;
+        setInterval(() => {
+
+            var x = Math.floor(Math.random() * 50)
+            toplam = toplam + x;
+            document.querySelector("#at1").style.marginLeft = toplam + "px"
+            
+        }, 500);
+
+        var toplam1 = 0;
+        setInterval(() => {
+
+            var y = Math.floor(Math.random() * 50)
+            toplam1 = toplam1 + y;
+            document.querySelector("#at2").style.marginLeft = toplam1 + "px"
+
+        }, 500);
+
+        var toplam2 = 0;
+        setInterval(() => {
+
+            var z = Math.floor(Math.random() * 50)
+            toplam2 = toplam2 + z;
+            document.querySelector("#at3").style.marginLeft = toplam2 + "px"
+
+        }, 500);
+
+    }
+
+</script>
+
+</html>
